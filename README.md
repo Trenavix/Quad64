@@ -1,7 +1,10 @@
-# Quad64 v0.2 (Beta build 3)
+# Quad64 v0.2 (Beta build 3) Dark Theme
 An open-source SM64 level editor written in C# 4.0, and uses Windows Forms and OpenTK.
 
-<a href="http://i.imgur.com/Mm4Spu7.png"><img src="http://i.imgur.com/Mm4Spu7.png"/></a>
+This fork is specifically for the dark theme version.
+It also updated OpenTK and OpenTK.GLControl to 3.0.0.
+
+<a href="https://cdn.discordapp.com/attachments/356315343926329345/444663469162364953/unknown.png"><img src="https://cdn.discordapp.com/attachments/356315343926329345/444663469162364953/unknown.png"/></a>
 
 ## Features
 
