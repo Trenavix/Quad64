@@ -26,8 +26,8 @@ namespace Quad64.src.Forms
         }
 
         private Font textFont = new Font("Courier New", 10, FontStyle.Bold);
-        private Brush textBrush = new SolidBrush(Color.DimGray);
-        private Pen bgPen = new Pen(Color.FromArgb(230, 230, 230), 100.0f);
+        private Brush textBrush = new SolidBrush(Color.FromArgb(176, 176, 176));
+        private Pen bgPen = new Pen(Color.FromArgb(48, 48, 48), 100.0f);
         private Rectangle bgRect = new Rectangle(0, 0, 400, 2);
         private void listView1_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
         {
@@ -61,15 +61,15 @@ namespace Quad64.src.Forms
             Close();
         }
 
-        private Color col1 = Color.FromArgb(250, 250, 240);
-        private Color col2 = Color.FromArgb(250, 240, 240);
-        private Color highlight = Color.FromArgb(200, 200, 255);
+        private Color col1 = Color.FromArgb(95, 100, 100);
+        private Color col2 = Color.FromArgb(85, 100, 100);
+        private Color highlight = Color.FromArgb(5, 50, 100);
         private void listView1_DrawItem(object sender, DrawListViewItemEventArgs e)
         {
             // If this item is the selected item
             if (e.Item.Selected)
             {
-                e.Item.ForeColor = Color.Black;
+                e.Item.ForeColor = Color.FromArgb(224, 224, 224); //lightgrey
                 e.Item.BackColor = highlight;
             }
             else
@@ -79,7 +79,7 @@ namespace Quad64.src.Forms
                 else
                     listView1.Items[e.ItemIndex].BackColor = col2;
             }
-
+            listView1.BackColor = Color.FromArgb(32, 32, 32);
             e.DrawBackground();
             e.DrawText();
         }

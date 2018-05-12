@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Drawing.Color MidGrey = System.Drawing.Color.FromArgb(176, 176, 176);
+            System.Drawing.Color VeryDarkGrey = System.Drawing.Color.FromArgb(32, 32, 32);
+            System.Drawing.Color DarkGrey = System.Drawing.Color.FromArgb(64, 64, 64);
+            System.Drawing.Color Black = System.Drawing.Color.FromArgb(0, 0, 0);
+            System.Drawing.Color White = System.Drawing.Color.FromArgb(255, 255, 255);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -137,7 +142,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.LightGray;
+            this.menuStrip1.BackColor = VeryDarkGrey;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -161,6 +166,7 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.ForeColor = MidGrey;
             // 
             // loadROMToolStripMenuItem
             // 
@@ -168,6 +174,8 @@
             this.loadROMToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.loadROMToolStripMenuItem.Text = "Load ROM";
             this.loadROMToolStripMenuItem.Click += new System.EventHandler(this.loadROMToolStripMenuItem_Click);
+            this.loadROMToolStripMenuItem.BackColor = MidGrey;
+            this.loadROMToolStripMenuItem.ForeColor = Black;
             // 
             // saveROMToolStripMenuItem
             // 
@@ -175,6 +183,8 @@
             this.saveROMToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.saveROMToolStripMenuItem.Text = "Save ROM";
             this.saveROMToolStripMenuItem.Click += new System.EventHandler(this.saveROMToolStripMenuItem_Click);
+            this.saveROMToolStripMenuItem.BackColor = MidGrey;
+            this.saveROMToolStripMenuItem.ForeColor = Black;
             // 
             // saveROMAsToolStripMenuItem
             // 
@@ -182,11 +192,15 @@
             this.saveROMAsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.saveROMAsToolStripMenuItem.Text = "Save ROM as...";
             this.saveROMAsToolStripMenuItem.Click += new System.EventHandler(this.saveROMAsToolStripMenuItem_Click);
+            this.saveROMAsToolStripMenuItem.BackColor = MidGrey;
+            this.saveROMAsToolStripMenuItem.ForeColor = Black;
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(148, 6);
+            this.toolStripSeparator3.BackColor = VeryDarkGrey;
+            this.toolStripSeparator3.ForeColor = Black;
             // 
             // testROMToolStripMenuItem
             // 
@@ -194,6 +208,7 @@
             this.testROMToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.testROMToolStripMenuItem.Text = "Launch ROM";
             this.testROMToolStripMenuItem.Click += new System.EventHandler(this.testROMToolStripMenuItem_Click);
+            this.testROMToolStripMenuItem.BackColor = MidGrey;
             // 
             // editToolStripMenuItem
             // 
@@ -209,6 +224,8 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.BackColor = VeryDarkGrey;
+            this.editToolStripMenuItem.ForeColor = MidGrey;
             // 
             // objectComboPresetToolStripMenuItem
             // 
@@ -217,6 +234,7 @@
             this.objectComboPresetToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.objectComboPresetToolStripMenuItem.Text = "Object Combo/Preset";
             this.objectComboPresetToolStripMenuItem.Click += new System.EventHandler(this.objectComboPresetToolStripMenuItem_Click);
+            this.objectComboPresetToolStripMenuItem.BackColor = MidGrey;
             // 
             // toolStripSeparator4
             // 
@@ -229,6 +247,7 @@
             this.modelIDToolStripMenuItem.Name = "modelIDToolStripMenuItem";
             this.modelIDToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.modelIDToolStripMenuItem.Text = "Model ID";
+            this.modelIDToolStripMenuItem.BackColor = MidGrey;
             // 
             // behaviorToolStripMenuItem
             // 
@@ -237,6 +256,7 @@
             this.behaviorToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.behaviorToolStripMenuItem.Text = "Behavior";
             this.behaviorToolStripMenuItem.Click += new System.EventHandler(this.behaviorToolStripMenuItem_Click);
+            this.behaviorToolStripMenuItem.BackColor = MidGrey;
             // 
             // behParametersToolStripMenuItem
             // 
@@ -249,12 +269,14 @@
             this.behParametersToolStripMenuItem.Name = "behParametersToolStripMenuItem";
             this.behParametersToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.behParametersToolStripMenuItem.Text = "Beh. Parameters";
+            this.behParametersToolStripMenuItem.BackColor = MidGrey;
             // 
             // bParam1ToolStripMenuItem
             // 
             this.bParam1ToolStripMenuItem.Name = "bParam1ToolStripMenuItem";
             this.bParam1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bParam1ToolStripMenuItem.Text = "B. Param 1";
+
             // 
             // bParam2ToolStripMenuItem
             // 
@@ -286,6 +308,7 @@
             this.objectComboNameToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.objectComboNameToolStripMenuItem.Text = "Object Combo Name";
             this.objectComboNameToolStripMenuItem.Click += new System.EventHandler(this.objectComboNameToolStripMenuItem_Click);
+            this.objectComboNameToolStripMenuItem.BackColor = MidGrey;
             // 
             // levelToolStripMenuItem
             // 
@@ -297,6 +320,8 @@
             this.levelToolStripMenuItem.Name = "levelToolStripMenuItem";
             this.levelToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.levelToolStripMenuItem.Text = "Level";
+            this.levelToolStripMenuItem.BackColor = VeryDarkGrey;
+            this.levelToolStripMenuItem.ForeColor = MidGrey;
             // 
             // selectLeveToolStripMenuItem
             // 
@@ -304,6 +329,7 @@
             this.selectLeveToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.selectLeveToolStripMenuItem.Text = "Select Level";
             this.selectLeveToolStripMenuItem.Click += new System.EventHandler(this.selectLeveToolStripMenuItem_Click);
+            this.selectLeveToolStripMenuItem.BackColor = MidGrey;
             // 
             // selectAreaToolStripMenuItem
             // 
@@ -319,6 +345,15 @@
             this.selectAreaToolStripMenuItem.Name = "selectAreaToolStripMenuItem";
             this.selectAreaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.selectAreaToolStripMenuItem.Text = "Select Area";
+            this.selectAreaToolStripMenuItem.BackColor = MidGrey;
+            this.Area0Button.BackColor = MidGrey;
+            this.Area1Button.BackColor = MidGrey;
+            this.Area2Button.BackColor = MidGrey;
+            this.Area3Button.BackColor = MidGrey;
+            this.Area4Button.BackColor = MidGrey;
+            this.Area5Button.BackColor = MidGrey;
+            this.Area6Button.BackColor = MidGrey;
+            this.Area7Button.BackColor = MidGrey;
             // 
             // Area0Button
             // 
@@ -387,6 +422,7 @@
             this.texturesToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.texturesToolStripMenuItem1.Text = "Textures";
             this.texturesToolStripMenuItem1.Click += new System.EventHandler(this.texturesToolStripMenuItem_Click);
+            this.texturesToolStripMenuItem1.BackColor = MidGrey;
             // 
             // helpToolStripMenuItem
             // 
@@ -398,6 +434,8 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Misc";
+            this.helpToolStripMenuItem.BackColor = VeryDarkGrey;
+            this.helpToolStripMenuItem.ForeColor = MidGrey;
             // 
             // settingsToolStripMenuItem
             // 
@@ -405,6 +443,7 @@
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            this.settingsToolStripMenuItem.BackColor = MidGrey;
             // 
             // rOMInfoToolStripMenuItem
             // 
@@ -412,6 +451,7 @@
             this.rOMInfoToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.rOMInfoToolStripMenuItem.Text = "ROM Info";
             this.rOMInfoToolStripMenuItem.Click += new System.EventHandler(this.rOMInfoToolStripMenuItem_Click);
+            this.rOMInfoToolStripMenuItem.BackColor = MidGrey;
             // 
             // toolStripSeparator1
             // 
@@ -424,6 +464,7 @@
             this.scriptsDumpToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.scriptsDumpToolStripMenuItem.Text = "Script Dumps";
             this.scriptsDumpToolStripMenuItem.Click += new System.EventHandler(this.scriptsDumpToolStripMenuItem_Click);
+            this.scriptsDumpToolStripMenuItem.BackColor = MidGrey;
             // 
             // statusStrip1
             // 
@@ -435,6 +476,8 @@
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(40, 40, 40);
+            this.statusStrip1.ForeColor = White;
             // 
             // toolStripStatusLabel1
             // 
@@ -442,6 +485,7 @@
             this.toolStripStatusLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel1.Text = "Ready";
+            this.toolStripStatusLabel1.ForeColor = White;
             // 
             // panel1
             // 
@@ -453,6 +497,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(880, 24);
             this.panel1.TabIndex = 3;
+            this.panel1.BackColor = VeryDarkGrey;
             // 
             // panel2
             // 
@@ -467,6 +512,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(117, 24);
             this.panel2.TabIndex = 2;
+            this.panel2.BackColor = VeryDarkGrey;
             // 
             // act6
             // 
@@ -474,7 +520,7 @@
             this.act6.BackgroundImage = global::Quad64.Properties.Resources.icon_Star1_gray;
             this.act6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.act6.FlatAppearance.BorderSize = 0;
-            this.act6.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Control;
+            this.act6.FlatAppearance.CheckedBackColor = VeryDarkGrey;
             this.act6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.act6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.act6.Location = new System.Drawing.Point(94, 4);
@@ -587,8 +633,7 @@
             this.propertyGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.propertyGrid1.CommandsBackColor = System.Drawing.SystemColors.Control;
-            this.propertyGrid1.CommandsDisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.propertyGrid1.CommandsDisabledLinkColor = System.Drawing.Color.FromArgb(64, 64, 64);
             this.propertyGrid1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.propertyGrid1.LineColor = System.Drawing.Color.LightGray;
             this.propertyGrid1.Location = new System.Drawing.Point(0, 0);
@@ -599,6 +644,14 @@
             this.propertyGrid1.UseCompatibleTextRendering = true;
             this.propertyGrid1.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.propertyGrid1_PropertyValueChanged);
             this.propertyGrid1.PropertySortChanged += new System.EventHandler(this.propertyGrid1_PropertySortChanged);
+            this.propertyGrid1.BackColor = VeryDarkGrey;
+            this.propertyGrid1.CategoryForeColor = White;
+            this.propertyGrid1.CommandsBackColor = White;
+            this.propertyGrid1.ViewBackColor = DarkGrey;
+            this.propertyGrid1.ViewForeColor = White;
+            this.propertyGrid1.LineColor = VeryDarkGrey;
+            this.propertyGrid1.HelpBackColor = VeryDarkGrey;
+            this.propertyGrid1.HelpForeColor = White;
             // 
             // splitContainer2
             // 
@@ -607,10 +660,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer2.Location = new System.Drawing.Point(1, 25);
             this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.BackColor = VeryDarkGrey;
+            this.splitContainer2.ForeColor = Black ;
             // 
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.splitContainer3);
+            this.splitContainer2.Panel1.BackColor = VeryDarkGrey;
             // 
             // splitContainer2.Panel2
             // 
@@ -621,6 +677,7 @@
             this.splitContainer2.SplitterDistance = 219;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
+            this.splitContainer2.Panel2.BackColor = VeryDarkGrey;
             // 
             // splitContainer3
             // 
@@ -628,6 +685,8 @@
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
             this.splitContainer3.Name = "splitContainer3";
             this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainer3.BackColor = VeryDarkGrey;
+            this.splitContainer3.ForeColor = Black;
             // 
             // splitContainer3.Panel2
             // 
@@ -636,12 +695,14 @@
             this.splitContainer3.SplitterDistance = 208;
             this.splitContainer3.TabIndex = 0;
             this.splitContainer3.TabStop = false;
+            this.splitContainer3.Panel2.BackColor = VeryDarkGrey;
+            this.splitContainer3.Panel2.ForeColor = Black;
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(48, 48, 48);
             this.panel3.Controls.Add(this.radioButton_front);
             this.panel3.Controls.Add(this.radioButton_back);
             this.panel3.Controls.Add(this.radioButton_top);
@@ -829,6 +890,7 @@
             this.camSpeedLabel.TabIndex = 12;
             this.camSpeedLabel.Text = "100%";
             this.camSpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.camSpeedLabel.ForeColor = White;
             // 
             // label6
             // 
@@ -842,6 +904,7 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Cam spd:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.ForeColor = White;
             // 
             // trackBar_camSpeed
             // 
@@ -870,6 +933,7 @@
             this.objSpeedLabel.TabIndex = 9;
             this.objSpeedLabel.Text = "100%";
             this.objSpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.objSpeedLabel.ForeColor = White;
             // 
             // label3
             // 
@@ -882,6 +946,7 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Move speed:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.ForeColor = White;
             // 
             // trackBar_moveSpeed
             // 
@@ -919,6 +984,7 @@
             this.label2.Size = new System.Drawing.Size(96, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Move Camera";
+            this.label2.ForeColor = White;
             // 
             // moveCam_strafe
             // 
@@ -970,6 +1036,7 @@
             this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Rotate Object";
+            this.label1.ForeColor = White;
             // 
             // rotObj
             // 
@@ -1019,6 +1086,7 @@
             this.moveObjectLabel.Size = new System.Drawing.Size(96, 16);
             this.moveObjectLabel.TabIndex = 4;
             this.moveObjectLabel.Text = "Move Object";
+            this.moveObjectLabel.ForeColor = White;
             // 
             // moveObj
             // 
@@ -1080,6 +1148,7 @@
             this.warpToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.warpToolStripMenuItem.Text = "Warp";
             this.warpToolStripMenuItem.Click += new System.EventHandler(this.warpToolStripMenuItem_Click);
+            this.warpToolStripMenuItem.BackColor = MidGrey;
             // 
             // MainForm
             // 
@@ -1129,6 +1198,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.movObj_UpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.BackColor = VeryDarkGrey;
 
         }
 

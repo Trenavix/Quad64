@@ -182,7 +182,8 @@ namespace Quad64.src.Forms
             currentTextbox.Clear();
             int currentIndent = 0;
             StringBuilder sb = new StringBuilder();
-            sb.Append("{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}{\\colortbl;\\red0\\green0\\blue0;\\red0\\green128\\blue0; }\\viewkind4\\uc1\\pard\\f0\\fs17 ");
+            sb.Append("{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}{\\colortbl;\\red200\\green200\\blue200;\\red0\\green128\\blue0; }\\viewkind4\\uc1\\pard\\f0\\fs17 ");
+            sb.Append("\\cf1 "); //init colour 1 (lightgrey)
             for (int i = 0; i < glsList.Count; i++)
             {
                 ScriptDumpCommandInfo info = glsList[i];
@@ -226,7 +227,7 @@ namespace Quad64.src.Forms
                 {
                     sb.Append("\\cf2 // "); // Set to color #2 (Green)
                     sb.Append(info.description);
-                    sb.Append("\\cf1 "); // Set to color #1 (Black)
+                    sb.Append("\\cf1 "); // Set to color #1 (Lightgrey)
                 }
 
                 sb.Append("\\line "); // Add a new line

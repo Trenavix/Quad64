@@ -26,8 +26,17 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+
+
         private void InitializeComponent()
         {
+            System.Drawing.Color MidGrey = System.Drawing.Color.FromArgb(176, 176, 176);
+            System.Drawing.Color VeryDarkGrey = System.Drawing.Color.FromArgb(32, 32, 32);
+            System.Drawing.Color DarkGrey = System.Drawing.Color.FromArgb(64, 64, 64);
+            System.Drawing.Color Black = System.Drawing.Color.FromArgb(0, 0, 0);
+            System.Drawing.Color White = System.Drawing.Color.FromArgb(255, 255, 255);
+            System.Drawing.Color Lightgrey = System.Drawing.Color.FromArgb(224, 224, 224);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScriptDumps));
             this.sd_tabs = new System.Windows.Forms.TabControl();
             this.tabLevel = new System.Windows.Forms.TabPage();
@@ -84,8 +93,8 @@
             // 
             // sd_tabs
             // 
-            this.sd_tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.sd_tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sd_tabs.Controls.Add(this.tabLevel);
             this.sd_tabs.Controls.Add(this.tabObjects);
@@ -106,11 +115,13 @@
             this.tabLevel.TabIndex = 0;
             this.tabLevel.Text = "Level";
             this.tabLevel.UseVisualStyleBackColor = true;
+            this.tabLevel.BackColor = Lightgrey;
+            this.tabLevel.ForeColor = Black;
             // 
             // subTabsLevel
             // 
-            this.subTabsLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.subTabsLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subTabsLevel.Controls.Add(this.lt_lsTab);
             this.subTabsLevel.Controls.Add(this.lt_glTab);
@@ -132,11 +143,13 @@
             this.lt_lsTab.TabIndex = 0;
             this.lt_lsTab.Text = "Level script";
             this.lt_lsTab.UseVisualStyleBackColor = true;
+            this.lt_lsTab.BackColor = Lightgrey;
+            this.lt_lsTab.ForeColor = Black;
             // 
             // lt_ls_textbox
             // 
-            this.lt_ls_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lt_ls_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lt_ls_textbox.DetectUrls = false;
             this.lt_ls_textbox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,6 +161,8 @@
             this.lt_ls_textbox.TabStop = false;
             this.lt_ls_textbox.Text = "";
             this.lt_ls_textbox.WordWrap = false;
+            this.lt_ls_textbox.BackColor = VeryDarkGrey;
+            this.lt_ls_textbox.ForeColor = MidGrey;
             // 
             // lt_glTab
             // 
@@ -160,10 +175,12 @@
             this.lt_glTab.TabIndex = 1;
             this.lt_glTab.Text = "Geometry layout script";
             this.lt_glTab.UseVisualStyleBackColor = true;
+            this.lt_glTab.BackColor = Lightgrey;
+            this.lt_glTab.ForeColor = Black;
             // 
             // lt_gls_radioPanel
             // 
-            this.lt_gls_radioPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lt_gls_radioPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lt_gls_radioPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lt_gls_radioPanel.Location = new System.Drawing.Point(0, 0);
@@ -174,8 +191,8 @@
             // 
             // lt_gls_textbox
             // 
-            this.lt_gls_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lt_gls_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lt_gls_textbox.DetectUrls = false;
             this.lt_gls_textbox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,6 +204,8 @@
             this.lt_gls_textbox.TabStop = false;
             this.lt_gls_textbox.Text = "";
             this.lt_gls_textbox.WordWrap = false;
+            this.lt_gls_textbox.BackColor = VeryDarkGrey;
+            this.lt_gls_textbox.ForeColor = MidGrey;
             // 
             // lt_f3dTab
             // 
@@ -202,7 +221,7 @@
             // 
             // lt_f3d_listbox
             // 
-            this.lt_f3d_listbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lt_f3d_listbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lt_f3d_listbox.BackColor = System.Drawing.SystemColors.Window;
             this.lt_f3d_listbox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,10 +233,12 @@
             this.lt_f3d_listbox.Size = new System.Drawing.Size(88, 341);
             this.lt_f3d_listbox.TabIndex = 10;
             this.lt_f3d_listbox.SelectedIndexChanged += new System.EventHandler(this.lt_f3d_listbox_SelectedIndexChanged);
+            this.lt_f3d_listbox.BackColor = VeryDarkGrey;
+            this.lt_f3d_listbox.ForeColor = MidGrey;
             // 
             // lt_f3d_radioPanel
             // 
-            this.lt_f3d_radioPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lt_f3d_radioPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lt_f3d_radioPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lt_f3d_radioPanel.Location = new System.Drawing.Point(0, 0);
@@ -228,8 +249,8 @@
             // 
             // lt_f3d_textbox
             // 
-            this.lt_f3d_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lt_f3d_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lt_f3d_textbox.DetectUrls = false;
             this.lt_f3d_textbox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,6 +262,8 @@
             this.lt_f3d_textbox.TabStop = false;
             this.lt_f3d_textbox.Text = "";
             this.lt_f3d_textbox.WordWrap = false;
+            this.lt_f3d_textbox.BackColor = VeryDarkGrey;
+            this.lt_f3d_textbox.ForeColor = MidGrey;
             // 
             // tabObjects
             // 
@@ -251,19 +274,25 @@
             this.tabObjects.TabIndex = 2;
             this.tabObjects.Text = "Objects";
             this.tabObjects.UseVisualStyleBackColor = true;
+            tabObjects.BackColor = Lightgrey;
+            tabObjects.ForeColor = Black;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.BackColor = Lightgrey;
+            this.splitContainer1.ForeColor = Black;
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.listObjectsSortPanel);
             this.splitContainer1.Panel1.Controls.Add(this.listBoxObjects);
+            this.splitContainer1.Panel1.BackColor = Lightgrey;
+            this.splitContainer1.Panel1.ForeColor = Black;
             // 
             // splitContainer1.Panel2
             // 
@@ -271,10 +300,12 @@
             this.splitContainer1.Size = new System.Drawing.Size(711, 391);
             this.splitContainer1.SplitterDistance = 225;
             this.splitContainer1.TabIndex = 2;
+            this.splitContainer1.Panel2.BackColor = Lightgrey;
+            this.splitContainer1.Panel2.ForeColor = Black;
             // 
             // listObjectsSortPanel
             // 
-            this.listObjectsSortPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.listObjectsSortPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listObjectsSortPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listObjectsSortPanel.Controls.Add(this.comboBoxObjectSort);
@@ -283,11 +314,13 @@
             this.listObjectsSortPanel.Name = "listObjectsSortPanel";
             this.listObjectsSortPanel.Size = new System.Drawing.Size(224, 25);
             this.listObjectsSortPanel.TabIndex = 1;
+            this.listObjectsSortPanel.BackColor = Lightgrey;
+            this.listObjectsSortPanel.ForeColor = Black;
             // 
             // comboBoxObjectSort
             // 
-            this.comboBoxObjectSort.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBoxObjectSort.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxObjectSort.DisplayMember = "0";
             this.comboBoxObjectSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -306,6 +339,8 @@
             this.comboBoxObjectSort.Size = new System.Drawing.Size(166, 21);
             this.comboBoxObjectSort.TabIndex = 1;
             this.comboBoxObjectSort.SelectedIndexChanged += new System.EventHandler(this.comboBoxObjectSort_SelectedIndexChanged);
+            this.comboBoxObjectSort.BackColor = VeryDarkGrey;
+            this.comboBoxObjectSort.ForeColor = MidGrey;
             // 
             // ListObjectsSortLabel
             // 
@@ -319,8 +354,8 @@
             // 
             // listBoxObjects
             // 
-            this.listBoxObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.listBoxObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxObjects.FormattingEnabled = true;
             this.listBoxObjects.IntegralHeight = false;
@@ -329,11 +364,13 @@
             this.listBoxObjects.Size = new System.Drawing.Size(224, 363);
             this.listBoxObjects.TabIndex = 0;
             this.listBoxObjects.SelectedIndexChanged += new System.EventHandler(this.listBoxObjects_SelectedIndexChanged);
+            this.listBoxObjects.ForeColor = MidGrey;
+            this.listBoxObjects.BackColor = VeryDarkGrey;
             // 
             // subTabsObjects
             // 
-            this.subTabsObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.subTabsObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subTabsObjects.Controls.Add(this.tabPage1);
             this.subTabsObjects.Controls.Add(this.tabPage2);
@@ -355,11 +392,13 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Geometry layout script";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.BackColor = Lightgrey;
+            this.tabPage1.ForeColor = Black;
             // 
             // ot_gls_textbox
             // 
-            this.ot_gls_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.ot_gls_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ot_gls_textbox.DetectUrls = false;
             this.ot_gls_textbox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,6 +410,8 @@
             this.ot_gls_textbox.TabStop = false;
             this.ot_gls_textbox.Text = "";
             this.ot_gls_textbox.WordWrap = false;
+            this.ot_gls_textbox.BackColor = VeryDarkGrey;
+            this.ot_gls_textbox.ForeColor = MidGrey;
             // 
             // tabPage2
             // 
@@ -384,10 +425,12 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Fast3D script";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.BackColor = Lightgrey;
+            this.tabPage2.ForeColor = Black;
             // 
             // ot_f3d_listbox
             // 
-            this.ot_f3d_listbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ot_f3d_listbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.ot_f3d_listbox.BackColor = System.Drawing.SystemColors.Window;
             this.ot_f3d_listbox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -399,11 +442,13 @@
             this.ot_f3d_listbox.Size = new System.Drawing.Size(88, 364);
             this.ot_f3d_listbox.TabIndex = 12;
             this.ot_f3d_listbox.SelectedIndexChanged += new System.EventHandler(this.ot_f3d_listbox_SelectedIndexChanged);
+            this.ot_f3d_listbox.BackColor = VeryDarkGrey;
+            this.ot_f3d_listbox.ForeColor = MidGrey;
             // 
             // ot_f3d_textbox
             // 
-            this.ot_f3d_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.ot_f3d_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ot_f3d_textbox.DetectUrls = false;
             this.ot_f3d_textbox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -415,11 +460,13 @@
             this.ot_f3d_textbox.TabStop = false;
             this.ot_f3d_textbox.Text = "";
             this.ot_f3d_textbox.WordWrap = false;
+            this.ot_f3d_textbox.BackColor = VeryDarkGrey;
+            this.ot_f3d_textbox.ForeColor = MidGrey;
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox2.DetectUrls = false;
             this.richTextBox2.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -431,6 +478,8 @@
             this.richTextBox2.TabStop = false;
             this.richTextBox2.Text = "";
             this.richTextBox2.WordWrap = false;
+            this.richTextBox2.BackColor = VeryDarkGrey;
+            this.richTextBox2.ForeColor = MidGrey;
             // 
             // tabPage3
             // 
@@ -441,11 +490,13 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Behavior script";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.BackColor = Lightgrey;
+            this.tabPage3.ForeColor = Black;
             // 
             // ot_beh_textbox
             // 
-            this.ot_beh_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.ot_beh_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ot_beh_textbox.DetectUrls = false;
             this.ot_beh_textbox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -457,6 +508,8 @@
             this.ot_beh_textbox.TabStop = false;
             this.ot_beh_textbox.Text = "";
             this.ot_beh_textbox.WordWrap = false;
+            this.ot_beh_textbox.BackColor = VeryDarkGrey;
+            this.ot_beh_textbox.ForeColor = MidGrey;
             // 
             // IndentCB
             // 
@@ -537,7 +590,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.showRomCB);
@@ -550,6 +603,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(714, 24);
             this.panel1.TabIndex = 20;
+            this.panel1.BackColor = Lightgrey;
+            this.panel1.ForeColor = Black;
             // 
             // ScriptDumps
             // 
@@ -583,6 +638,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.BackColor = Lightgrey;
+            this.ForeColor = Black;
 
         }
 

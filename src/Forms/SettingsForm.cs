@@ -17,6 +17,7 @@ namespace Quad64.src.Forms
         public SettingsForm()
         {
             InitializeComponent();
+            tabs.DrawItem += new DrawItemEventHandler(tabs_DrawItem);
         }
 
         private void SettingsForm_Load(object sender, EventArgs e)
@@ -44,7 +45,9 @@ namespace Quad64.src.Forms
         private void addButtonWithTextBox(TabPage page, string buttonText, string textBoxText, bool isTextBoxReadOnly, int x, int y, int screenWidth, ref TextBox box, ref Button button, EventHandler buttonClickEvent)
         {
             button = newButton(buttonText, x, y, buttonClickEvent);
+            button.BackColor = Color.FromArgb(224, 224, 224);
             box = newTextBox(textBoxText, isTextBoxReadOnly, x + button.Width, y+1, screenWidth-button.Width-3);
+            box.ForeColor = Color.FromArgb(224, 224, 224);
             page.Controls.Add(button);
             page.Controls.Add(box);
         }
@@ -95,6 +98,8 @@ namespace Quad64.src.Forms
         private void AddComboBoxSetting(TabPage page, string label, string[] options, int x, int y, int selectedIndex)
         {
             Label cbl = newLabel(label, x, y+3);
+            cbl.BackColor = Color.FromArgb(32, 32, 32);
+            cbl.ForeColor = Color.FromArgb(224, 224, 224);
             page.Controls.Add(cbl);
             page.Controls.Add(newComboBox(options, x + cbl.Width, y, selectedIndex));
         }
@@ -107,7 +112,9 @@ namespace Quad64.src.Forms
             label.Left = x;
             label.Top = y;
             label.Width = width;
-            label.BorderStyle = BorderStyle.Fixed3D;
+            label.BorderStyle = BorderStyle.FixedSingle;
+            label.ForeColor = Color.FromArgb(48, 48, 48);
+            label.BackColor = Color.Black;
             label.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
             return label;
         }
@@ -120,6 +127,7 @@ namespace Quad64.src.Forms
             label.Text = text;
             label.Left = x;
             label.Top = y;
+            label.ForeColor = Color.FromArgb(224, 224, 224);
             return label;
         }
 
@@ -132,6 +140,7 @@ namespace Quad64.src.Forms
             label.Left = x;
             label.Top = y;
             label.Font = font;
+            label.ForeColor = Color.FromArgb(224, 224, 244);
             return label;
         }
 
@@ -154,6 +163,8 @@ namespace Quad64.src.Forms
             box.Top = y;
             box.ReadOnly = readOnly;
             box.Width = width;
+            box.BackColor = Color.FromArgb(64, 64, 64);
+            box.ForeColor = Color.FromArgb(224, 224, 244);
             return box;
         }
 
@@ -179,6 +190,7 @@ namespace Quad64.src.Forms
             box.AutoSize = true;
             box.TabStop = false;
             box.Checked = isChecked;
+            box.ForeColor = Color.FromArgb(224, 224, 224);
             return box;
         }
 
@@ -215,6 +227,17 @@ namespace Quad64.src.Forms
         private void comboBox_MouseWheel(object sender, MouseEventArgs e)
         {
             ((HandledMouseEventArgs)e).Handled = true;
+        }
+
+        private void tabs_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabPage page = tabs.TabPages[e.Index];
+            e.Graphics.FillRectangle(new SolidBrush(page.BackColor), e.Bounds);
+
+            Rectangle paddedBounds = e.Bounds;
+            int yOffset = (e.State == DrawItemState.Selected) ? -2 : 1;
+            paddedBounds.Offset(1, yOffset);
+            TextRenderer.DrawText(e.Graphics, page.Text, Font, paddedBounds, Color.FromArgb(224, 224, 224));
         }
     }
 }

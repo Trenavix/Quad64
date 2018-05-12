@@ -40,9 +40,10 @@
             // cancelButton
             // 
             this.cancelButton.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.Location = new System.Drawing.Point(249, 266);
+            this.cancelButton.Location = new System.Drawing.Point(457, 491);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(100, 27);
+            this.cancelButton.Size = new System.Drawing.Size(183, 50);
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // selectButton
             // 
             this.selectButton.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectButton.Location = new System.Drawing.Point(107, 266);
+            this.selectButton.Location = new System.Drawing.Point(196, 491);
+            this.selectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(100, 27);
+            this.selectButton.Size = new System.Drawing.Size(183, 50);
             this.selectButton.TabIndex = 4;
             this.selectButton.Text = "Set";
             this.selectButton.UseVisualStyleBackColor = true;
@@ -65,21 +67,21 @@
             this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.AutoArrange = false;
-            this.listView1.BackColor = System.Drawing.SystemColors.Window;
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.listView1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 30);
+            this.listView1.Location = new System.Drawing.Point(22, 55);
+            this.listView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.OwnerDraw = true;
             this.listView1.ShowGroups = false;
-            this.listView1.Size = new System.Drawing.Size(440, 227);
+            this.listView1.Size = new System.Drawing.Size(803, 416);
             this.listView1.TabIndex = 3;
             this.listView1.TabStop = false;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -97,25 +99,30 @@
             // 
             this.label_filter.AutoSize = true;
             this.label_filter.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_filter.Location = new System.Drawing.Point(12, 9);
+            this.label_filter.ForeColor = System.Drawing.Color.White;
+            this.label_filter.Location = new System.Drawing.Point(22, 17);
+            this.label_filter.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label_filter.Name = "label_filter";
-            this.label_filter.Size = new System.Drawing.Size(56, 14);
+            this.label_filter.Size = new System.Drawing.Size(94, 22);
             this.label_filter.TabIndex = 6;
             this.label_filter.Text = "Filter:";
             // 
             // textBox_filter
             // 
-            this.textBox_filter.Location = new System.Drawing.Point(70, 6);
+            this.textBox_filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox_filter.Location = new System.Drawing.Point(128, 11);
+            this.textBox_filter.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox_filter.Name = "textBox_filter";
-            this.textBox_filter.Size = new System.Drawing.Size(382, 20);
+            this.textBox_filter.Size = new System.Drawing.Size(697, 29);
             this.textBox_filter.TabIndex = 7;
             this.textBox_filter.TextChanged += new System.EventHandler(this.textBox_filter_TextChanged);
             // 
             // SelectBehavior
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 301);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.ClientSize = new System.Drawing.Size(851, 556);
             this.Controls.Add(this.textBox_filter);
             this.Controls.Add(this.label_filter);
             this.Controls.Add(this.cancelButton);
@@ -123,6 +130,7 @@
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "SelectBehavior";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Select Behavior";

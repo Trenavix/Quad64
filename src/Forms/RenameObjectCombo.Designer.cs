@@ -36,16 +36,20 @@
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(12, 12);
+            this.textBox.BackColor = System.Drawing.Color.Gray;
+            this.textBox.ForeColor = System.Drawing.Color.White;
+            this.textBox.Location = new System.Drawing.Point(22, 22);
+            this.textBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(315, 20);
+            this.textBox.Size = new System.Drawing.Size(574, 29);
             this.textBox.TabIndex = 0;
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(65, 44);
+            this.buttonOK.Location = new System.Drawing.Point(119, 81);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK.Size = new System.Drawing.Size(138, 42);
             this.buttonOK.TabIndex = 1;
             this.buttonOK.Text = "Ok";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -53,9 +57,10 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(197, 44);
+            this.buttonCancel.Location = new System.Drawing.Point(361, 81);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(138, 42);
             this.buttonCancel.TabIndex = 2;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -63,14 +68,16 @@
             // 
             // RenameObjectCombo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 79);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.ClientSize = new System.Drawing.Size(622, 146);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.textBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RenameObjectCombo";

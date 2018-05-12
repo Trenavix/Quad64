@@ -54,10 +54,13 @@ namespace Quad64
             treeView1.Name = "treeView1";
             treeView1.DrawMode = TreeViewDrawMode.OwnerDrawAll;
             treeView1.Font = new Font("Segoe UI", 8.0f, FontStyle.Bold);
+            treeView1.BackColor = Color.FromArgb(40, 40, 40);
+            treeView1.LineColor = Color.FromArgb(127, 127, 127);
+            treeView1.ForeColor = Color.White;
             treeView1.Nodes.Add(makeTreeNode("3D Objects", Color.FromArgb(192, 0, 0)));
-            treeView1.Nodes.Add(makeTreeNode("Macro 3D Objects", Color.FromArgb(0, 0, 192)));
+            treeView1.Nodes.Add(makeTreeNode("Macro 3D Objects", Color.FromArgb(0, 120, 192)));
             treeView1.Nodes.Add(makeTreeNode("Special 3D Objects", Color.FromArgb(0, 192, 0)));
-            treeView1.Nodes.Add(makeTreeNode("Warps", Color.FromArgb(0, 0, 0)));
+            treeView1.Nodes.Add(makeTreeNode("Warps", Color.FromArgb(255, 255, 255)));
             treeView1.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
             treeView1.Size = new Size(217, 206);
             treeView1.TabIndex = 0;
@@ -75,6 +78,7 @@ namespace Quad64
         public MainForm()
         {
             InitializeComponent();
+            InitToolStripSeparators();
             initTreeView();
             OpenTK.Toolkit.Init();
             glControl1.CreateControl();
@@ -89,6 +93,26 @@ namespace Quad64
             myTimer.Interval = 10;
             myTimer.Enabled = false;
             //foreach(ObjectComboEntry entry in Globals.objectComboEntries) Console.WriteLine(entry.ToString());
+        }
+
+        private void InitToolStripSeparators() //Repaint separators for dark theme
+        {
+            this.toolStripSeparator1.Paint += new PaintEventHandler(Separator_Custom_Paint);
+            this.toolStripSeparator2.Paint += new PaintEventHandler(Separator_Custom_Paint);
+            this.toolStripSeparator3.Paint += new PaintEventHandler(Separator_Custom_Paint);
+            this.toolStripSeparator4.Paint += new PaintEventHandler(Separator_Custom_Paint);
+            this.toolStripSeparator5.Paint += new PaintEventHandler(Separator_Custom_Paint);
+
+        }
+
+        private void Separator_Custom_Paint(Object sender, PaintEventArgs e)
+        {
+            ToolStripSeparator sep = (ToolStripSeparator)sender;
+
+            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(176, 176, 176)), 0, 0, sep.Width, sep.Height);
+
+            e.Graphics.DrawLine(new Pen(Color.Black), 30, sep.Height / 2, sep.Width - 4, sep.Height / 2);
+
         }
 
         private void loadROM(bool startingUp)
@@ -432,7 +456,7 @@ namespace Quad64
         private void glControl1_Load(object sender, EventArgs e)
         {
             GL.Enable(EnableCap.Blend);
-            GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.OneMinusSrcAlpha);
+            GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
 
             GL.Enable(EnableCap.DepthTest);
             GL.DepthFunc(DepthFunction.Lequal);

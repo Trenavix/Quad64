@@ -36,6 +36,7 @@ namespace Quad64
             label.BorderStyle = 0;
             label.BackColor = this.BackColor;
             label.TabStop = false;
+            label.ForeColor = System.Drawing.Color.White;
             return label;
         }
         
